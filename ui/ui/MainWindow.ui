@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>选择路径</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>输入路径：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_input_dir"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_input_dir">
+           <property name="text">
+            <string>打开输入文件夹</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>输出路径：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_output_dir"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_output_dir">
+           <property name="text">
+            <string>打开输出文件夹</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>选择参数</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QCheckBox" name="checkBox_shadow">
+           <property name="text">
+            <string>阴影</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_white_margin">
+           <property name="text">
+            <string>白色边框</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_use_equivalent_focal_length">
+           <property name="text">
+            <string>等效焦距</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_padding_with_original_ratio">
+           <property name="text">
+            <string>按比例填充</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox_logo_enable">
+           <property name="text">
+            <string>启用LOGO</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>布局：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_layout">
+           <item>
+            <property name="text">
+             <string>normal</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>normal(Logo 居右)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>normal(黑红配色)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>normal(黑红配色，Logo 居右)</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>左上角</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_left_top">
+             <item>
+              <property name="text">
+               <string extracomment="csdf">相机型号(eg. Nikon Z7)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>相机厂商(eg. Nikon)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>镜头型号(eg. Nikkor 24-70 f/2.8)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>拍摄参数(eg. 50mm f/1.8 1/1000s ISO 100)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>拍摄时间(eg. 2023-01-01 12:00)</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>右上角</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_right_top">
+             <item>
+              <property name="text">
+               <string extracomment="csdf">相机型号(eg. Nikon Z7)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>相机厂商(eg. Nikon)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>镜头型号(eg. Nikkor 24-70 f/2.8)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>拍摄参数(eg. 50mm f/1.8 1/1000s ISO 100)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>拍摄时间(eg. 2023-01-01 12:00)</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>左下角</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_left_bottom">
+             <item>
+              <property name="text">
+               <string extracomment="csdf">相机型号(eg. Nikon Z7)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>相机厂商(eg. Nikon)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>镜头型号(eg. Nikkor 24-70 f/2.8)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>拍摄参数(eg. 50mm f/1.8 1/1000s ISO 100)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>拍摄时间(eg. 2023-01-01 12:00)</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>右下角</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_right_bottom">
+             <item>
+              <property name="text">
+               <string extracomment="csdf">相机型号(eg. Nikon Z7)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>相机厂商(eg. Nikon)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>镜头型号(eg. Nikkor 24-70 f/2.8)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>拍摄参数(eg. 50mm f/1.8 1/1000s ISO 100)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>拍摄时间(eg. 2023-01-01 12:00)</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_run">
+        <property name="text">
+         <string>运行</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>输出日志</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTextEdit" name="textEdit_log"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
